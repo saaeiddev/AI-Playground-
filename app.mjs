@@ -221,7 +221,7 @@ async function start3D() {
       const tube=new THREE.Mesh(new THREE.TubeGeometry(path,48,.019,7,false),curveMat);
       group.add(tube);
       const particle=new THREE.Mesh(new THREE.SphereGeometry(.058,10,10),pulseMat);group.add(particle);
-      links.push({path,particle,offset:i/links.length+ i*.13,left});
+      links.push({path,particle,offset:i*.17,left});
     });
     const dotGeom=new THREE.SphereGeometry(.014,6,5);
     const dotMat=new THREE.MeshBasicMaterial({color:0x70cdff,transparent:true,opacity:.7});
