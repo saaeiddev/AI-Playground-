@@ -65,6 +65,7 @@ export default function Scene(props: SceneState & { className?: string }) {
           <button
             aria-label="Zoom in"
             title="Zoom in"
+            disabled={failed || loading}
             onClick={() => scene.current?.zoom(0.84)}
           >
             <Plus size={15} />
@@ -72,6 +73,7 @@ export default function Scene(props: SceneState & { className?: string }) {
           <button
             aria-label="Zoom out"
             title="Zoom out"
+            disabled={failed || loading}
             onClick={() => scene.current?.zoom(1.18)}
           >
             <Minus size={15} />
@@ -79,6 +81,7 @@ export default function Scene(props: SceneState & { className?: string }) {
           <button
             aria-label="Fit to screen"
             title="Fit to screen"
+            disabled={failed || loading}
             onClick={() => scene.current?.fit()}
           >
             <Maximize size={15} />
@@ -86,6 +89,7 @@ export default function Scene(props: SceneState & { className?: string }) {
           <button
             aria-label="Reset camera"
             title="Reset camera"
+            disabled={failed || loading}
             onClick={() => scene.current?.fit()}
           >
             <RotateCcw size={15} />

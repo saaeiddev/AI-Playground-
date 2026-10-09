@@ -41,4 +41,6 @@ The phone-width check validates responsive CSS, not actual iPhone Safari or Andr
 
 ## Publication
 
-The production workflow targets the existing `saaeiddev/AI-Playground-` repository and its GitHub Pages site at <https://saaeiddev.github.io/AI-Playground-/>. A successful build alone is not proof of deployment; verify the Pages workflow result and the public site's loaded assets when publishing.
+The production workflow targets the existing `saaeiddev/AI-Playground-` repository and its GitHub Pages site at <https://saaeiddev.github.io/AI-Playground-/>.
+
+The [Pages workflow for implementation commit 542ccfd](https://github.com/saaeiddev/AI-Playground-/actions/runs/37896806498) completed successfully. The public site was then opened and exercised, not just checked for an HTTP response. Its single-neuron controls produced −1.86 for the linear example above. The production ES-module training worker ran XOR from initial loss 0.72936 to 0.00384 at epoch 96, and to 3.00e−7 at epoch 10,428 before an acknowledged pause. The public Learning Center loaded and its lesson navigation worked. `learning-preview.jpg` is a screenshot from that published application. The same cloud WebGL restriction described above applies to live-site visual testing.

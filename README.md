@@ -20,6 +20,10 @@ The existing repository is named `AI-Playground-`, with a trailing hyphen. Its G
 
 The artificial neurons use actual Three.js sphere geometry, physical transmission, a studio environment, refractive thickness, clearcoat, cyan rims, a curved internal partition and billboarded Σ / ƒ symbols. The biological model is original procedural geometry, not a third-party stock asset.
 
+![Learning Center in the published application](docs/learning-preview.jpg)
+
+Actual screenshot of the published Learning Center. Hardware-rendered 3D screenshots could not be captured in the validation browser; see the [validation record](docs/VALIDATION.md).
+
 ## Development
 
 Requires **Node.js 22+** and npm.
