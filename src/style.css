@@ -2082,6 +2082,58 @@ footer > a:last-child {
   }
 }
 /* Readable scientific controls at desktop and phone sizes. */
+.biology-model {
+  min-width: 0;
+  margin: 24px 0;
+  border: 1px solid #e8e3d9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fffcf6;
+}
+.biology-model > .panel-heading {
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 20px;
+}
+.biology-model-scene {
+  height: 410px;
+  background: radial-gradient(ellipse at center, #fff6e4, #fffdfa 70%);
+}
+.biology-model-controls {
+  padding: 20px;
+  border-top: 1px solid #eee7dc;
+}
+.biology-model-controls .button-row {
+  flex-wrap: wrap;
+}
+.biology-model-controls > .hint {
+  margin: 12px 0;
+}
+.biology-inspector {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1.2fr);
+  gap: 18px;
+  align-items: center;
+  margin: 20px 0;
+}
+.biology-description {
+  color: #6f6252;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+@media (max-width: 720px) {
+  .biology-model-scene {
+    height: 320px;
+  }
+  .biology-model > .panel-heading,
+  .biology-model-controls {
+    padding: 14px;
+  }
+  .biology-inspector {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}
 .eyebrow {
   font-size: 0.75rem;
 }

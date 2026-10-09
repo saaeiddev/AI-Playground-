@@ -25,6 +25,7 @@ import {
 import Architecture from "./components/Architecture";
 import Inspector from "./components/Inspector";
 import Learning from "./components/Learning";
+import { anatomy } from "./components/Biology";
 import {
   neuron,
   createNetwork,
@@ -44,20 +45,6 @@ const pages: [Page, string, typeof Atom][] = [
   ["training", "Training Studio", Activity],
   ["learning", "Learning Center", BookOpen],
 ];
-const anatomy: Record<string, string> = {
-  Dendrites: "Branched extensions receive graded synaptic inputs.",
-  Soma: "The cell body supports metabolism and integrates incoming signals.",
-  Nucleus:
-    "Contains DNA and regulates cell function; electrical signals do not pass through it.",
-  "Axon hillock":
-    "The axon emerges here. Action potentials usually initiate in the nearby axon initial segment.",
-  Axon: "Carries action potentials toward the terminals.",
-  "Myelin sheath": "Insulation that speeds conduction along the axon.",
-  "Nodes of Ranvier": "Gaps in myelin where action potentials are regenerated.",
-  "Axon terminals":
-    "Calcium entry triggers neurotransmitter release at chemical synapses.",
-  Synapses: "Junctions where a neuron communicates with another cell.",
-};
 const operations = [
   "Receive inputs",
   "Multiply by weights",
@@ -657,7 +644,7 @@ export default function App() {
             <Training reduced={reduced} />
           </Suspense>
         )}
-        {page === "learning" && <Learning />}
+        {page === "learning" && <Learning reduced={reduced} />}
       </main>
       <footer>
         <a className="footer-brand" href="#explorer">

@@ -35,6 +35,10 @@ Pause uses a worker acknowledgement and revision counter to prevent an obsolete 
 
 ## Testing limits
 
+### Biology lesson follow-up
+
+The **Explore the biology** action previously navigated to text-only lessons. The lesson page now mounts the actual biological `Scene` in each of its four biology lessons, with the same Three.js neuron geometry used by the homepage. The exact button path was checked in the browser, along with selection of Nodes of Ranvier, pause/play, a below-threshold value of −70 mV, lesson changes, and removal of the biology viewer on mathematics lessons. The 390-pixel mobile viewport has no horizontal document overflow; the scene has a nonzero 297 × 320 CSS-pixel drawing area. All 52 existing tests and the production build pass. The [browser QA screenshot](biology-viewer-qa.jpg) records the new viewer's placement and the cloud browser's explicit WebGL failure state; it is not evidence of GPU appearance. GPU appearance remains subject to the testing limitation below.
+
 The cloud browser reports its GL renderer as **Disabled** and cannot create a WebGL 2 context. Consequently, no hardware-rendered screenshot, glass/refraction comparison, raycast interaction verification or FPS measurement is claimed from this environment. Geometry tests validate the scene construction but cannot validate GPU shader appearance. The application retains its actual interactive Three.js scenes; the failure panel is not a replacement illustration.
 
 The phone-width check validates responsive CSS, not actual iPhone Safari or Android device behavior. Physical touch gestures and GPU performance on Windows, macOS, iOS and Android still require testing on those devices. The biological illustration intentionally simplifies anatomy and electrochemical dynamics; it is not a physiological simulator.

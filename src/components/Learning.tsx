@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronRight, BookOpen, Check } from "lucide-react";
+import Biology from "./Biology";
 const lessons = [
   {
     group: "Biology",
@@ -72,7 +73,7 @@ const lessons = [
     note: "The learning rate η controls update size. Training can stall or become unstable; more layers and larger rates do not guarantee better results.",
   },
 ];
-export default function Learning() {
+export default function Learning({ reduced }: { reduced: boolean }) {
   const [index, setIndex] = useState(0),
     lesson = lessons[index];
   return (
@@ -116,6 +117,7 @@ export default function Learning() {
             {lesson.group} · LESSON {index + 1} / 10
           </span>
           <h2>{lesson.title}</h2>
+          {lesson.group === "Biology" && <Biology reduced={reduced} />}
           <p>{lesson.body}</p>
           <div className="lesson-equation">{lesson.equation}</div>
           <div className="science-note">

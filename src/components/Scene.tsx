@@ -43,7 +43,9 @@ export default function Scene(props: SceneState & { className?: string }) {
       {loading && !failed && (
         <div className="scene-loading" role="status">
           <span className="spinner" />
-          Preparing 3D glass…
+          {props.mode === "bio"
+            ? "Preparing biological neuron…"
+            : "Preparing 3D glass…"}
         </div>
       )}
       {failed && (
@@ -51,8 +53,9 @@ export default function Scene(props: SceneState & { className?: string }) {
           <AlertTriangle />
           <strong>3D rendering is unavailable</strong>
           <p>
-            The numerical controls still work. Try reloading or a browser with
-            WebGL 2 enabled.
+            {props.mode === "bio"
+              ? "Anatomy descriptions are still available. Try reloading or a browser with WebGL 2 enabled."
+              : "The numerical controls still work. Try reloading or a browser with WebGL 2 enabled."}
           </p>
           <button onClick={() => setAttempt((n) => n + 1)}>Retry 3D</button>
         </div>

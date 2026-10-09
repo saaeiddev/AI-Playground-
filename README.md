@@ -18,7 +18,7 @@ The existing repository is named `AI-Playground-`, with a trailing hyphen. Its G
 | Training Studio       | Train on AND, OR, XOR, Linear, Circle and Spiral datasets. Observe genuine loss, training accuracy, parameter values, sample predictions and a decision surface. Pause, resume and reset. |
 | Learning Center       | Ten concise lessons covering biological signaling, mathematical neurons, forward propagation, loss, gradients, backpropagation and Adam.                                                  |
 
-The artificial neurons use actual Three.js sphere geometry, physical transmission, a studio environment, refractive thickness, clearcoat, cyan rims, a curved internal partition and billboarded Σ / ƒ symbols. The biological model is original procedural geometry, not a third-party stock asset.
+The artificial neurons use actual Three.js sphere geometry, physical transmission, a studio environment, refractive thickness, clearcoat, cyan rims, a curved internal partition and billboarded Σ / ƒ symbols. The biological model is original procedural geometry, not a third-party stock asset. **Explore the biology** opens the Learning Center with that interactive model embedded in all four biology lessons, alongside anatomy selection, signal controls and the illustrative membrane-potential control.
 
 ![Learning Center in the published application](docs/learning-preview.jpg)
 
